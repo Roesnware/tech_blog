@@ -9,6 +9,7 @@
 main{
     background-color: var(--green);
     width: 100%;
+    height:100vh;
     padding: 0;
     margin: 0;
 }
@@ -21,25 +22,58 @@ footer{
 
 header{
     margin: 0;
-    padding: 0;
+    padding: 1.7rem;
+}
+
+nav {
+    margin-bottom: 1rem;
 }
 
 header nav a {
     text-decoration: none;
+    padding-bottom: .2rem;
+    padding-right: .2rem;
+    margin-right: 5rem;
     color: var(--green);
+    font-size: 1.5rem;
 }
 
 /* id selectors */
 #header-title {
-    box-shadow: 10px 10px var(--grey);
+    box-shadow: 5px 5px var(--grey);
+    border-radius: .45rem;
     background-color: var(--green);
     color: var(--brown);
+    width: 18rem;
+    font-size: 2.6rem;
+    font-weight: bold;
 }
 
 #header {
     background-color: var(--brown);
     color: var(--green);
-    width: 15%;
-    font-size: 2rem;
-    font-weight: bold;
+}
+
+#login-header {
+    background-color: var(--brown);
+    text-align: left;
+    color: var(--green);
+}
+
+#signup-header {
+    background-color: var(--brown);
+    text-align: left;
+    color: var(--green);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.forms {
+    margin-top: 6rem;
+    font-size: 1.5rem;
+    border: .5rem solid var(--brown);
 }
