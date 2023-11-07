@@ -16,12 +16,6 @@ main{
     margin: 0;
 }
 
-footer{
-    margin: 0;
-    padding: 0;
-    background-color: var(--green);
-}
-
 header{
     margin: 0;
     padding: 1.7rem;
@@ -74,6 +68,7 @@ header nav a {
 /* class selectors */
 .container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -108,6 +103,19 @@ header nav a {
     margin-bottom: .75rem;
 }
 
+.back-to-login-btn {
+    margin-top: .75rem;
+}
+
 .btn:hover{
     background-color: var(--darkgrey);
+}
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--green);
+    width: 100%;
+    font-size: 2.1rem;
 }

@@ -26,13 +26,15 @@
             </nav>
             <h1 class="badge" id="header-title">The Tech Blog</h1>
         </header>
-        <main class="">
-            <!-- Render the sub layout -->
-            {{{ body }}}
-        </main>
-        <footer>
-            <p>Made with <i class="fa-solid fa-heart" style="color: #ab3b57;"></i> by TR</p>
-        </footer>
+        <div class="container">
+            <main class="">
+                <!-- Render the sub layout -->
+                {{{ body }}}
+            </main>
+            <section class="footer">
+                <h2>Made with <i class="fa-solid fa-heart" style="color: #ab3b57;"></i> by TR</h2>
+            </section>
+        </div>
     </div>
 
     <!-- Render script for logged in users only -->

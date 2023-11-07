@@ -20,7 +20,15 @@ const signupFormHandler = async (event) => {
     }
   };
 
+  const sendToLogIn = () => {
+
+    document.location.replace('/login');
+  }
 
   document
   .querySelector('.signup-form')
   .addEventListener('submit', signupFormHandler);
+
+  document
+  .querySelector('.back-to-login-btn')
+  .addEventListener('click', sendToLogIn);
