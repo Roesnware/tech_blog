@@ -1,0 +1,13 @@
+:root {
+    --brown: #231010;
+    --green: #D9EAD3;
+    --grey: #A7A7A7;
+}
+
+#header-title {
+    box-shadow: 10px 10px var(--grey);
+}
+
+#header {
+    background-color: var(--brown);
+}
