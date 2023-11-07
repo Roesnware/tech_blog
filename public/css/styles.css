@@ -8,10 +8,25 @@
 /* element selectors */
 main{
     background-color: var(--green);
+    width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 footer{
+    margin: 0;
+    padding: 0;
     background-color: var(--green);
+}
+
+header{
+    margin: 0;
+    padding: 0;
+}
+
+header nav a {
+    text-decoration: none;
+    color: var(--green);
 }
 
 /* id selectors */
@@ -24,4 +39,7 @@ footer{
 #header {
     background-color: var(--brown);
     color: var(--green);
+    width: 15%;
+    font-size: 2rem;
+    font-weight: bold;
 }
