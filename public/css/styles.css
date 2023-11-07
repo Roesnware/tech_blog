@@ -1,13 +1,27 @@
+/* universal selectors */
 :root {
     --brown: #231010;
     --green: #D9EAD3;
     --grey: #A7A7A7;
 }
 
+/* element selectors */
+main{
+    background-color: var(--green);
+}
+
+footer{
+    background-color: var(--green);
+}
+
+/* id selectors */
 #header-title {
     box-shadow: 10px 10px var(--grey);
+    background-color: var(--green);
+    color: var(--brown);
 }
 
 #header {
     background-color: var(--brown);
+    color: var(--green);
 }
