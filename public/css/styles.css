@@ -77,3 +77,15 @@ header nav a {
     font-size: 1.5rem;
     border: .5rem solid var(--brown);
 }
+
+.form-group {
+    padding: .5rem;
+}
+
+.signup-btn {
+    margin-left: 5rem;
+}
+
+.login-btn {
+    margin-left: 3rem;
+}
