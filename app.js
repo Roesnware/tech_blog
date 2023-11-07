@@ -7,9 +7,6 @@ const exphbs = require('express-handlebars');
 // import routes
 const routes = require('./controllers');
 
-// import helpers
-const helpers = require('./utils/helpers');
-
 // import ocnnection
 const sequelize = require('./config/connection');
 
@@ -23,7 +20,7 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 // use helpers w hbrs
-const hbs = exphbs.create({ helpers });
+const hbs = exphbs.create();
 
 // session object with the sequelize store
 const sess = {
