@@ -58,6 +58,7 @@ header nav a {
 
 #login-header {
     background-color: var(--brown);
+    padding-bottom: 1rem;
     text-align: left;
     color: var(--green);
 }
@@ -70,6 +71,7 @@ header nav a {
     margin-bottom: .2rem;
 }
 
+/* class selectors */
 .container {
     display: flex;
     align-items: center;
@@ -77,23 +79,33 @@ header nav a {
 }
 
 .forms {
+    width: 80rem;
     margin-top: 6rem;
-    font-size: 1.5rem;
+    font-size: 1.85rem;
     border: .5rem solid var(--brown);
 }
 
 .form-group {
-    padding: .5rem;
+    padding: 1.2rem;
+}
+
+.form-input {
+    width: 100%;
+    height: 1.9rem;
 }
 
 .btn {
     width: 100%;
-    height: 1.5rem;
+    height: 1.9rem;
     border-radius: .2rem;
     border: none;
     background-color: var(--grey);
     color: var(--white);
     font-size: 1.1rem;
+}
+
+.login-btn {
+    margin-bottom: .75rem;
 }
 
 .btn:hover{
