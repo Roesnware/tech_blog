@@ -3,6 +3,8 @@
     --brown: #231010;
     --green: #D9EAD3;
     --grey: #A7A7A7;
+    --white: #FFFFFF;
+    --darkgrey: #898989;
 }
 
 /* element selectors */
@@ -64,6 +66,8 @@ header nav a {
     background-color: var(--brown);
     text-align: left;
     color: var(--green);
+    padding-bottom: 1rem;
+    margin-bottom: .2rem;
 }
 
 .container {
@@ -82,10 +86,16 @@ header nav a {
     padding: .5rem;
 }
 
-.signup-btn {
-    margin-left: 5rem;
+.btn {
+    width: 100%;
+    height: 1.5rem;
+    border-radius: .2rem;
+    border: none;
+    background-color: var(--grey);
+    color: var(--white);
+    font-size: 1.1rem;
 }
 
-.login-btn {
-    margin-left: 3rem;
+.btn:hover{
+    background-color: var(--darkgrey);
 }
