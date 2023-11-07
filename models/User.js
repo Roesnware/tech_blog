@@ -1,13 +1,16 @@
+// import modules
 const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
+// user model
 class User extends Model {
   checkPassword(loginPw) {
     return bcrypt.compareSync(loginPw, this.password);
   }
 }
 
+// user constructor
 User.init(
   {
     id: {
@@ -51,4 +54,5 @@ User.init(
   }
 );
 
+// export module
 module.exports = User;
