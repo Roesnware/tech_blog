@@ -27,7 +27,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
 router.get('/login', (req, res) => {
   // user already logged in redirect to homepage
   if (req.session.logged_in) {
-    res.redirect('/');
+    res.redirect('/homepage');
     return;
   }
   // otherwise render login page 
@@ -38,7 +38,7 @@ router.get('/login', (req, res) => {
 router.get('/signup', (req, res) => {
   // user already logged in redirect to homepage
   if (req.session.logged_in) {
-    res.redirect('/');
+    res.redirect('/homepage');
     return;
   }
   // otherwise render signup page 
