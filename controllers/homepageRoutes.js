@@ -5,16 +5,21 @@ const withAuth = require('../utils/auth');
 
 // get request to homepage
 router.get('/', async (req, res) => {
+  console.log(req.session.user_id);
+  console.log(req.session.logged_in);
+
   try { // try 
     // get all blogPosts 
-    const allBlogPost = await BlogPost.findAll({});
+    const allBlogPost = await BlogPost.findAll({
+      include: [User],
+    });
 
     // serialize blogPosts so the template can read it
-    const blogPosts = allBlogPost.map((blogPost) => blogPost.get({ plain: true }));
+    const blogPost = allBlogPost.map((post) => post.get({ plain: true }));
 
     // pass serialized blogPosts and session flag into template
     res.render('homepage', {
-      blogPosts,
+      blogPost,
       logged_in: req.session.logged_in,
     });
   } catch (err) { // catch err
@@ -24,11 +29,13 @@ router.get('/', async (req, res) => {
 
 // get request to dashboard withAuth middleware to prevent access to route if not logged in
 router.get('/dashboard', withAuth, async (req, res) => {
+  console.log(req.session.user_id);
+  console.log(req.session.logged_in);
+
   try { // try
     // get all post by user 
     const allUserPost = await BlogPost.findAll(
       {
-        include: [ User ],
         where: {
           user_id: req.session.user_id,
         }

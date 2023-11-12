@@ -24,14 +24,20 @@ router.post('/', async (req, res) => {
 router.post('/login', async (req, res) => {
   try { //try 
 
-    // search users by email 
-    const userData = await User.findOne({ where: { email: req.body.email } });
+    // search users by username 
+    const userData = await User.findOne(
+      {
+        where:
+        {
+          username: req.body.username
+        }
+      });
 
-    // no user with that email
+    // no user with that username
     if (!userData) {
       res
         .status(400)
-        .json({ message: 'Incorrect email, please try again' });
+        .json({ message: 'Incorrect username, please try again' });
       return;
     }
 
@@ -50,7 +56,7 @@ router.post('/login', async (req, res) => {
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
-      
+
       res.json({ user: userData, message: 'You are now logged in!' });
     });
 

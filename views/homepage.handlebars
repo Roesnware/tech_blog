@@ -2,18 +2,22 @@
 
     <div>
 
-        {{#each blogPost as |post| }}
+        {{#each blogPost as |post|}}
 
-        <div class="blogPost">
-            <header>
-                <h2>{{post.title}}</h2>
-                <p>Posted by {{post.user_id}} on {{post.created_at}}</p>
-            </header>
-            <h3>{{post.content}}</h3>
-        </div>
+        <a href="/blog/{{post.id}}">
+
+            <div class="blogPost">
+                <header>
+                    <h2>{{post.title}}</h2>
+                    <p>Posted by {{post.user.username}} on {{post.created_date}}</p>
+                </header>
+                <h3>{{post.content}}</h3>
+            </div>
+
+        </a>
 
         {{/each}}
-        
+
     </div>
 
 </div>
