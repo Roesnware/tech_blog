@@ -34,6 +34,10 @@ header nav a {
     font-size: 1.5rem;
 }
 
+a {
+    text-decoration: none;
+}
+
 /* id selectors */
 #header-title {
     box-shadow: 5px 5px var(--grey);
@@ -71,6 +75,10 @@ header nav a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.fullView {
+    height: 100%;
 }
 
 .forms {
@@ -118,4 +126,82 @@ header nav a {
     background-color: var(--green);
     width: 100%;
     font-size: 2.1rem;
+}
+
+.blogPost {
+    margin: 1rem;
+    border: 6px solid var(--brown);
+    color: var(--brown);
+    width: 90rem;
+    font-size: 1.5rem;
+    height: 100%;
+}
+
+.Comment h1 {
+    color: var(--brown);
+}
+
+.addCommentBox {
+    margin: 1rem;
+    border: 6px solid var(--brown);
+    color: var(--brown);
+    width: 90rem;
+    font-size: 1.5rem;
+    height: 100%;
+}
+
+.addCommentBox h2 {
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+
+.addCommentBox h1 {
+    height: 4rem;
+    background-color: var(--brown);
+    color: var(--brown);
+}
+
+.addCommentBox form {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    width: 100%;
+}
+
+.addCommentBox form input {
+    margin-right: 1rem;
+    width: 97%;
+    height: 5rem;
+}
+
+.addCommentBox a {
+    margin-top: 1rem;
+    width: 97%;
+    padding: .4rem;
+    border-radius: .5rem;
+    background-color: var(--darkgrey);
+    text-align: center;
+    color: whitesmoke;
+}
+
+.blogPost header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--brown);
+    color: var(--green);
+    padding: 1rem;
+}
+
+.blogPost header h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.blogPost header p {
+    font-size: 1.2rem;
+}
+
+.blogPost h3 {
+    padding: 1rem;
 }

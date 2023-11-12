@@ -4,18 +4,21 @@ const { BlogPost, User, Comments } = require('../models');
 const withAuth = require('../utils/auth');
 
 // get request to homepage
-router.get('/', async (req, res) => {
+router.get('/:id', async (req, res) => {
   try { // try 
     // get this blogPosts 
-    const thisBlogPost = await BlogPost.findByPk(req.params.id);
+    const thisBlogPost = await BlogPost.findByPk(req.params.id, {
+      include: [User],
+    });
 
     // serialize blogPosts so the template can read it
     const blogPosts = thisBlogPost.get({ plain: true });
 
     // get commetns for this post 
     const commentsForPost = await Comments.findAll({
+        include: [User],
         where: {
-            blog_id: req.params.id,
+            blogpost_id: req.params.id,
         }
     });
 

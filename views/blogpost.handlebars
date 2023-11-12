@@ -3,28 +3,29 @@
     <div class="blogPost">
         <header>
             <h2>{{blogPosts.title}}</h2>
-            <p>Posted by {{blogPosts.user_id}} on {{blogPosts.created_at}}</p>
+            <p>Posted by {{blogPosts.user.username}} on {{blogPosts.created_date}}</p>
         </header>
         <h3>{{blogPosts.content}}</h3>
     </div>
 
     {{#each comments as |comment| }}
 
-    <div class="Comment">
+    <div class="blogPost Comment">
         <header>
-            <p>Posted by {{comment.user_id}} on {{comment.created_at}}</p>
+            <h1> Hide </h1>
         </header>
         <h3>{{comment.content}}</h3>
+        <h3>- {{comment.user.username}}, {{comment.created_date}}</h3>
     </div>
 
     {{/each}}
 
     {{#if logged_in}}
     <div class="addCommentBox">
-
+        <h1>Hide</h1>
         <h2>Comment</h2>
         <form>
-            <input type="text">
+            <input id="comment-box" type="text">
             <a id="submit-comment-btn" href="">Submit</a>
         </form>
 
@@ -33,3 +34,5 @@
 
 
 </div>
+
+<script src="/js/addComment.js"></script>
