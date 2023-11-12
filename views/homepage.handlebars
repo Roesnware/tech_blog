@@ -1,5 +1,19 @@
-{{#each blogPost as |post| }}
-<div class="">
-    <h3>{{post.blogPost_content}}</h3>
+<div class="container">
+
+    <div>
+
+        {{#each blogPost as |post| }}
+
+        <div class="blogPost">
+            <header>
+                <h2>{{post.title}}</h2>
+                <p>Posted by {{post.user_id}} on {{post.createdOn}}</p>
+            </header>
+            <h3>{{post.content}}</h3>
+        </div>
+
+        {{/each}}
+        
+    </div>
+
 </div>
-{{/each}}

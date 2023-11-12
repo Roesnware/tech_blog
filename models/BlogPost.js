@@ -14,14 +14,18 @@ BlogPost.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    blogPost_content: {
+    title: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    content: {
       type: DataTypes.TEXT,
       allowNull: false,
     },
   },
   {
     sequelize,
-    timestamps: false,
+    timestamps: true,
     freezeTableName: true,
     underscored: true,
     modelName: 'blogpost',

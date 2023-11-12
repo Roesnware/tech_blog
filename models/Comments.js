@@ -14,14 +14,14 @@ Comments.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    comment_content: {
+    content: {
       type: DataTypes.STRING,
       allowNull: false,
     },
   },
   {
     sequelize,
-    timestamps: false,
+    timestamps: true,
     freezeTableName: true,
     underscored: true,
     modelName: 'comment',

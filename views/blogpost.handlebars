@@ -1,0 +1,35 @@
+<div class="container">
+
+    <div class="blogPost">
+        <header>
+            <h2>{{blogPosts.title}}</h2>
+            <p>Posted by {{blogPosts.user_id}} on {{blogPosts.createdOn}}</p>
+        </header>
+        <h3>{{blogPosts.content}}</h3>
+    </div>
+
+    {{#each comments as |comment| }}
+
+    <div class="Comment">
+        <header>
+            <p>Posted by {{comment.user_id}} on {{comment.createdOn}}</p>
+        </header>
+        <h3>{{comment.content}}</h3>
+    </div>
+
+    {{/each}}
+
+    {{#if logged_in}}
+    <div class="addCommentBox">
+
+        <h2>Comment</h2>
+        <form>
+            <input type="text">
+            <a id="submit-comment-btn" href="">Submit</a>
+        </form>
+
+    </div>
+    {{/if}}
+
+
+</div>

@@ -54,7 +54,7 @@ router.post('/', withAuth, async (req, res) => {
     // create new blog post using body of request 
     const newBlogPost = await BlogPost.create(
       {
-        blogPost_content: req.body.blogPost_content,
+        content: req.body.content,
         user_id: req.session.user_id,
       });
 
@@ -76,7 +76,7 @@ router.post('/:id', withAuth, async (req, res) => {
     // update psot using body of request  
     const updateThisPost = await BlogPost.update(
       {
-        blogPost_content: req.body.blogPost_content
+        content: req.body.content
       },
       {
         where: {

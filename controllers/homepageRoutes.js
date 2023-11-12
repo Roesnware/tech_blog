@@ -26,7 +26,7 @@ router.get('/', async (req, res) => {
 router.get('/dashboard', withAuth, async (req, res) => {
   try { // try
     // get all post by user 
-    const allUserReviews = await BlogPost.findAll(
+    const allUserPost = await BlogPost.findAll(
       {
         include: [ User ],
         where: {
@@ -35,12 +35,12 @@ router.get('/dashboard', withAuth, async (req, res) => {
       });
 
     // no post found by user 
-    if (!allUserReviews) {
+    if (!allUserPost) {
       console.log("No Post found by this user!");
     }
 
     // serialize psot 
-    const userPost = allUserReviews.map((post) => post.get({ plain: true }));
+    const userPost = allUserPost.map((post) => post.get({ plain: true }));
 
     // render dashboard with post 
     res.render('dashboard', {
