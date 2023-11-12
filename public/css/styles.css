@@ -8,7 +8,7 @@
 }
 
 /* element selectors */
-main{
+body{
     background-color: var(--green);
     width: 100%;
     height:100vh;
@@ -75,6 +75,7 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 100%;
 }
 
 .fullView {
@@ -141,6 +142,10 @@ a {
     color: var(--brown);
 }
 
+.Comment h3 {
+    padding: 1.5rem !important;
+}
+
 .addCommentBox {
     margin: 1rem;
     border: 6px solid var(--brown);
@@ -172,6 +177,8 @@ a {
     margin-right: 1rem;
     width: 97%;
     height: 5rem;
+    border-radius: .4rem;
+    border: 1px solid black;
 }
 
 .addCommentBox a {
