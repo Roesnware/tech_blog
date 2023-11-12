@@ -20,7 +20,7 @@ const signupFormHandler = async (event) => {
       // successful post
       if (response.ok) {
         // redirect to homepage 
-        document.location.replace('/homepage');
+        document.location.replace('/');
       } else {
         alert(response.statusText);
       }
