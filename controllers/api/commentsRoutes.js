@@ -49,7 +49,7 @@ router.get('/:id', async (req, res) => {
 });
 
 // comment route to comment a new comments
-router.comment('/', withAuth, async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
   try { // try 
     // create new comments using body of request 
     const newComments = await Comments.create(
@@ -71,7 +71,7 @@ router.comment('/', withAuth, async (req, res) => {
 });
 
 // comment route to update comments 
-router.comment('/:id', withAuth, async (req, res) => {
+router.post('/:id', withAuth, async (req, res) => {
   try { // try 
     // update psot using body of request  
     const updateThisComment = await Comments.update(
