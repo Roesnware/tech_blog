@@ -32,30 +32,25 @@ router.get('/dashboard', withAuth, async (req, res) => {
   console.log(req.session.user_id);
   console.log(req.session.logged_in);
 
-  try { // try
-    // get all post by user 
-    const allUserPost = await BlogPost.findAll(
-      {
-        where: {
-          user_id: req.session.user_id,
-        }
-      });
-
-    // no post found by user 
-    if (!allUserPost) {
-      console.log("No Post found by this user!");
-    }
-
-    // serialize psot 
-    const userPost = allUserPost.map((post) => post.get({ plain: true }));
-
-    // render dashboard with post 
-    res.render('dashboard', {
-      userPost,
-      logged_in: res.session.logged_in,
+  try { // try 
+    // get all blog post using user_id from session 
+    const allUserBlogPost = await BlogPost.findAll({
+      include: [User],
+      where: {
+        user_id: req.session.user_id,
+      }
     });
 
-  } catch (err) { // catch err
+    // serialize blogPosts so the template can read it
+    const userPost = allUserBlogPost.map((post) => post.get({ plain: true }));
+
+    // success
+    res.render('dashboard', {
+      userPost,
+      logged_in: req.session.logged_in,
+    });
+  }
+  catch (err) { // catch err
     res.status(500).json(err);
   }
 });

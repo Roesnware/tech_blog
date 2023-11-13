@@ -8,15 +8,15 @@
 }
 
 /* element selectors */
-body{
+body {
     background-color: var(--green);
     width: 100%;
-    height:100vh;
+    height: 100vh;
     padding: 0;
     margin: 0;
 }
 
-header{
+header {
     margin: 0;
     padding: 1.7rem;
 }
@@ -69,6 +69,49 @@ a {
     margin-bottom: .2rem;
 }
 
+#postModal {
+    margin: 1rem;
+    width: 90rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: var(--brown);
+    border: 6px solid var(--brown);
+}
+
+#postModal div h1 {
+    font-size: 2.4rem;
+    padding: .5rem;
+    background-color: var(--brown);
+    color: var(--green);
+    margin-bottom: 1rem;
+}
+
+#postModal div form input {
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    padding: .5rem;
+    border-radius: .4rem;
+    border: 1px solid black;
+    width: 87rem;
+}
+
+#postModal div form label {
+    font-size: 1.4rem;
+    margin: 1rem;
+    padding: .5rem;
+}
+
+#postModal div button {
+    margin: 1rem;
+    padding: .5rem;
+    font-size: 1.4rem;
+    border-radius: .4rem;
+    color: whitesmoke;
+    background-color: var(--darkgrey);
+    width: 88rem;
+}
+
 /* class selectors */
 .container {
     display: flex;
@@ -76,6 +119,30 @@ a {
     align-items: center;
     justify-content: center;
     height: 100%;
+}
+
+.dashboardBlogPost {
+    margin: 1rem;
+    width: 50rem;
+    height: 3rem;
+    border: none;
+    border-radius: .4rem;
+    font-size: 1.4rem;
+    background-color: var(--grey);
+    color: whitesmoke;
+}
+
+.dashboardBlogPost:hover {
+    cursor: grab;
+    background-color: var(--darkgrey);
+}
+
+.postContainer {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .fullView {
@@ -87,6 +154,20 @@ a {
     margin-top: 6rem;
     font-size: 1.85rem;
     border: .5rem solid var(--brown);
+}
+
+.createNewPost {
+    display: flex;
+    margin: 1rem;
+    width: 100%;
+}
+
+.createNewPost a {
+    color: whitesmoke;
+    background-color: var(--brown);
+    border-radius: .4rem;
+    padding: 1.4rem;
+    margin-left: 40rem;
 }
 
 .form-group {
@@ -116,11 +197,11 @@ a {
     margin-top: .75rem;
 }
 
-.btn:hover{
+.btn:hover {
     background-color: var(--darkgrey);
 }
 
-.footer{
+.footer {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -211,4 +292,8 @@ a {
 
 .blogPost h3 {
     padding: 1rem;
+}
+
+.myModal {
+    display: none !important;
 }

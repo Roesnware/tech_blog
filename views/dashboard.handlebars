@@ -1,10 +1,50 @@
 <div class="container">
 
-    <div class="addPostBtn">
-        <a id="addPost" href="">
+    <div>
+        {{#each userPost as |post|}}
+
+        <button class="dashboardBlogPost">
+
+            <div class="postContainer">
+                <h3>{{post.title}}</h3>
+                <h3>{{post.created_date}}</h3>
+            </div>
+
+        </button>
+
+        {{/each}}
+
+    </div>
+
+    <div class="myModal" id="postModal">
+        <div>
+            <h1>Create New Post</h1>
+        </div>
+
+        <div>
+            <form class="formContainer">
+                <label for="title">Title</label><br>
+                <input id="title" type="text"><br>
+
+                <label for="content">Content</label><br>
+                <input id="content" type="text"><br>
+            </form>
+        </div>
+
+        <div>
+            <button id="submit-btn" type="click">Create</button>
+        </div>
+    </div>
+
+    <div class="createNewPost">
+
+        <a id="new-post-btn" href="">
             <i class="fa fa-plus-circle" aria-hidden="true"></i>
-            Create New Post
+            New Post
         </a>
+
     </div>
 
 </div>
+
+<script src="/js/addPost.js"></script>
