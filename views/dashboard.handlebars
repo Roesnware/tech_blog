@@ -3,7 +3,7 @@
     <div>
         {{#each userPost as |post|}}
 
-        <button class="dashboardBlogPost">
+        <button id="edit-btn" class="dashboardBlogPost">
 
             <div class="postContainer">
                 <h3>{{post.title}}</h3>
@@ -11,6 +11,27 @@
             </div>
 
         </button>
+
+        <div id="modal2" class="myModal">
+            <div>
+                <h1>Edit Post</h1>
+            </div>
+
+            <div>
+                <form class="formContainer">
+                    <label for="title2">Title</label><br>
+                    <input id="title2" type="text" value="{{post.title}}"><br>
+
+                    <label for="content2">Content</label><br>
+                    <input id="content2" type="text" value="{{post.content}}"><br>
+                </form>
+            </div>
+
+            <div id="currPost" data-id="{{post.id}}">
+                <button id="submit-updated-btn" type="click">Update Post</button>
+                <button id="delete-post-btn" type="click">Delete Post</button>
+            </div>
+        </div>
 
         {{/each}}
 
@@ -48,3 +69,4 @@
 </div>
 
 <script src="/js/addPost.js"></script>
+<script src="/js/editPost.js"></script>

@@ -77,7 +77,8 @@ router.post('/:id', withAuth, async (req, res) => {
     // update psot using body of request  
     const updateThisPost = await BlogPost.update(
       {
-        content: req.body.content
+        title: req.body.title,
+        content: req.body.content,
       },
       {
         where: {
