@@ -4,6 +4,8 @@ const deleteBtn = document.getElementById('delete-post-btn');
 const updateBtn = document.getElementById('submit-updated-btn');
 const modal2 = document.getElementById('modal2');
 const parentEle = document.getElementById('currPost');
+const postBtns = document.querySelector('.dashboardBlogPost');
+const addBtn = document.querySelector('.createNewPost');
 
 const titleInput2 = document.getElementById('title2');
 const contentInput2 = document.getElementById('content2');
@@ -14,6 +16,8 @@ const showBox2 = (event) => {
     event.preventDefault();
 
     // display modal
+    postBtns.classList.add("hidden");
+    addBtn.classList.add("hidden");
     modal2.classList.remove("myModal");
 }
 
