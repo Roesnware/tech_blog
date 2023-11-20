@@ -16,8 +16,32 @@
 
         </a>
 
+        <div class="ratingContainer">
+
+            <div class="blogRating">
+                <a href="">
+                    <span id="like-btn" class="material-symbols-outlined">
+                        thumb_up
+                    </span>
+                </a>
+                <span id="like-cnt">0</span>
+            </div>
+
+            <div class="blogRating">
+                <a href="">
+                    <span id="dislike-btn" class="material-symbols-outlined">
+                        thumb_down
+                    </span>
+                </a>
+                <span id="dislike-cnt">0</span>
+            </div>
+
+        </div>
+
         {{/each}}
 
     </div>
 
 </div>
+
+<script src="./js/rating.js"></script>
